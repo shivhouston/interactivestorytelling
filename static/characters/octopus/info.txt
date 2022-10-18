@@ -1,0 +1,13 @@
+anger
+concern
+cry
+default
+fakesmile
+fear
+laugh
+mad
+sad
+shame
+sinceresmile
+surprise
+terror

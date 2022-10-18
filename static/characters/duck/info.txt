@@ -1,0 +1,12 @@
+anger
+default
+default2
+fakesmile
+fakesmile2
+fear
+furious
+mad
+sinceresmile
+sly
+sly2
+surprise
