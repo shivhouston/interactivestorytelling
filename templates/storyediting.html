@@ -36,8 +36,8 @@
                     } else {
                         if ( willstoryloop ) {
                             iteration = 0;
-                            document.getElementById("dialogue1").innerHTML = character1_dialogue[iteration];
-                            document.getElementById("dialogue2").innerHTML = character2_dialogue[iteration];
+                            document.getElementById("dialogue1").value = character1_dialogue[iteration];
+                            document.getElementById("dialogue2").value = character2_dialogue[iteration];
                             document.getElementById("characterOne").src = "../static/characters/" + character1_type + "/" + translate(character1_emotion[iteration]) + ".png";
                             document.getElementById("characterTwo").src = "../static/characters/" + character2_type + "/" + translate(character2_emotion[iteration]) + ".png";
                             document.getElementById("pagenum").innerHTML = String(iteration + 1) + " of " + String(max);
@@ -47,8 +47,8 @@
                 function back() {
                    if(iteration > 0) {
                         iteration--;
-                        document.getElementById("dialogue1").innerHTML = character1_dialogue[iteration];
-                        document.getElementById("dialogue2").innerHTML = character2_dialogue[iteration];
+                        document.getElementById("dialogue1").value = character1_dialogue[iteration];
+                        document.getElementById("dialogue2").value = character2_dialogue[iteration];
                         document.getElementById("characterOne").src = "../static/characters/" + character1_type + "/" + translate(character1_emotion[iteration]) + ".png";
                         document.getElementById("characterTwo").src = "../static/characters/" + character2_type + "/" + translate(character2_emotion[iteration]) + ".png";
                         document.getElementById("pagenum").innerHTML = String(iteration + 1) + " of " + String(max);
@@ -58,8 +58,10 @@
           <div style="margin-right: 10px; transform: translateY(45%);"><button onclick="back()" type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i></button></div>
             <div class="border border-dark" style="width: 600px; height: 400px;">
                 <div class="d-flex justify-content-between" style="padding-top: 10px; margin-bottom:30px;">
-                    <p id = "dialogue1" class="text-center" style="width:250px;"></p>
-                    <p id = "dialogue2" class="text-center" style="width:250px;"></p>
+<!--                    <p id = "dialogue1" class="text-center" style="width:250px;"></p>-->
+                    <input id="dialogue1" type="text"/>
+<!--                    <p id = "dialogue2" class="text-center" style="width:250px;"></p>-->
+                    <input id="dialogue2" type="text"/>
                 </div>
                 <img id="characterOne" style="width:200px; margin-right: 100px; margin-left:50px;" src="">
                 <img id="characterTwo" style="width:200px; transform: scaleX(-1);" src="">
@@ -88,14 +90,15 @@
                         var character2_type = {{ character2_type|tojson|safe }}
                         var willstoryloop = {{ willstoryloop|tojson|safe }}
                         max = character1_emotion.length;
-                        document.getElementById("dialogue1").innerHTML = character1_dialogue[0];
-                        document.getElementById("dialogue2").innerHTML = character2_dialogue[0];
+                        document.getElementById("dialogue1").value = character1_dialogue[0];
+                        document.getElementById("dialogue2").value = character2_dialogue[0];
                         document.getElementById("characterOne").src = "../static/characters/" + character1_type + "/" + translate(character1_emotion[0]) + ".png";
                         document.getElementById("characterTwo").src = "../static/characters/" + character2_type + "/" + translate(character2_emotion[0]) + ".png";
 
                     </script>
             </div>
           <div style="margin-left: 10px; transform: translateY(45%);"><button onclick="forward()" type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-right"></i></button></div>
+          <div style="margin-left: 10px; transform: translateY(45%);"><button onclick="" type="button" class="btn btn-outline-primary">Save Story</button></div>
         </div>
             <p id="pagenum" style = "position:relative; left:60%; top:80%;"></p>
             <script>
