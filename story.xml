@@ -1,0 +1,101 @@
+<story>
+ <type_of_character_one>
+  frog
+ </type_of_character_one>
+ <type_of_character_two>
+  duck
+ </type_of_character_two>
+ <does_story_loop>
+  True
+ </does_story_loop>
+</story>
+<scene>
+ <characterone>
+  <emotion>
+   Fear
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Anger
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Anger
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Anger
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Happiness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Happiness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Fear
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Anger
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Happiness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Sadness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
