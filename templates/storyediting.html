@@ -62,6 +62,7 @@
                     character2_dialogue[iteration] = document.getElementById("dialogue2").value;
                 }
                 function generateXML() {
+                    saveStory();
                     $.ajax({
                         url: "/generate",
                         type: "POST",

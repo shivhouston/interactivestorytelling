@@ -76,6 +76,7 @@ def generateXML():
     mainStory.append(mainStory_DoesLoop)
     soup.append(mainStory)
 
+    print(len(character1_emotion))
     for i in range(len(character1_emotion)):
         curScene = soup.new_tag("scene")
         curScene_char1 = soup.new_tag("characterone")

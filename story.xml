@@ -15,7 +15,7 @@
    Fear
   </emotion>
   <dialogue>
-   testing
+   hello
   </dialogue>
  </characterone>
  <charactertwo>
@@ -23,7 +23,7 @@
    Anger
   </emotion>
   <dialogue>
-   null
+   hola
   </dialogue>
  </charactertwo>
 </scene>
@@ -41,7 +41,7 @@
    Anger
   </emotion>
   <dialogue>
-   null
+   test
   </dialogue>
  </charactertwo>
 </scene>
