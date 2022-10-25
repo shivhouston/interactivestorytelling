@@ -8,6 +8,7 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
         <style>
             .navbar-light .navbar-nav .nav-link  {color: var(--font-color)}
@@ -26,10 +27,11 @@
         <div class="centered" style="display: flex;">
             <script>
                 function forward() {
+                    saveStory();
                     if(iteration < (max - 1)) {
                         iteration++;
-                        document.getElementById("dialogue1").innerHTML = character1_dialogue[iteration];
-                        document.getElementById("dialogue2").innerHTML = character2_dialogue[iteration];
+                        document.getElementById("dialogue1").value = character1_dialogue[iteration];
+                        document.getElementById("dialogue2").value = character2_dialogue[iteration];
                         document.getElementById("characterOne").src = "../static/characters/" + character1_type + "/" + translate(character1_emotion[iteration]) + ".png";
                         document.getElementById("characterTwo").src = "../static/characters/" + character2_type + "/" + translate(character2_emotion[iteration]) + ".png";
                         document.getElementById("pagenum").innerHTML = String(iteration + 1) + " of " + String(max);
@@ -45,6 +47,7 @@
                     }
                 }
                 function back() {
+                   saveStory();
                    if(iteration > 0) {
                         iteration--;
                         document.getElementById("dialogue1").value = character1_dialogue[iteration];
@@ -53,6 +56,19 @@
                         document.getElementById("characterTwo").src = "../static/characters/" + character2_type + "/" + translate(character2_emotion[iteration]) + ".png";
                         document.getElementById("pagenum").innerHTML = String(iteration + 1) + " of " + String(max);
                     }
+                }
+                function saveStory() {
+                    character1_dialogue[iteration] = document.getElementById("dialogue1").value;
+                    character2_dialogue[iteration] = document.getElementById("dialogue2").value;
+                }
+                function generateXML() {
+                    $.ajax({
+                        url: "/generate",
+                        type: "POST",
+                        data: JSON.stringify({x: character1_dialogue, y: character2_dialogue}),
+                        contentType: "application/json; charset=utf-8",
+                        success: function(dat) { console.log(dat); }
+                    });
                 }
             </script>
           <div style="margin-right: 10px; transform: translateY(45%);"><button onclick="back()" type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i></button></div>
@@ -98,14 +114,12 @@
                     </script>
             </div>
           <div style="margin-left: 10px; transform: translateY(45%);"><button onclick="forward()" type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-right"></i></button></div>
-          <div style="margin-left: 10px; transform: translateY(45%);"><button onclick="" type="button" class="btn btn-outline-primary">Save Story</button></div>
+          <div style="margin-left: 10px; transform: translateY(45%);"><button onclick="generateXML()" type="button" class="btn btn-outline-primary">Save Story</button></div>
         </div>
             <p id="pagenum" style = "position:relative; left:60%; top:80%;"></p>
             <script>
                         document.getElementById("pagenum").innerHTML = String(iteration + 1) + " of " + String(max);
             </script>
-
-
 
       <!-- Body Stuff Ends Here xmlDoc.getElementsByTagName("emotion")[0].childNodes[0].nodeValue;-->
       
