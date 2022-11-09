@@ -1,12 +1,12 @@
 <story>
  <type_of_character_one>
-  frog
+  duck
  </type_of_character_one>
  <type_of_character_two>
-  duck
+  frog
  </type_of_character_two>
  <does_story_loop>
-  True
+  False
  </does_story_loop>
 </story>
 <scene>
@@ -15,33 +15,15 @@
    Fear
   </emotion>
   <dialogue>
-   bye
-  </dialogue>
- </characterone>
- <charactertwo>
-  <emotion>
-   Anger
-  </emotion>
-  <dialogue>
-   hola
-  </dialogue>
- </charactertwo>
-</scene>
-<scene>
- <characterone>
-  <emotion>
-   Anger
-  </emotion>
-  <dialogue>
    null
   </dialogue>
  </characterone>
  <charactertwo>
   <emotion>
-   Anger
+   Happiness
   </emotion>
   <dialogue>
-   test
+   null
   </dialogue>
  </charactertwo>
 </scene>
@@ -56,7 +38,7 @@
  </characterone>
  <charactertwo>
   <emotion>
-   Happiness
+   Sadness
   </emotion>
   <dialogue>
    null
@@ -84,7 +66,25 @@
 <scene>
  <characterone>
   <emotion>
-   Happiness
+   Fear
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Fear
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Anger
   </emotion>
   <dialogue>
    null

@@ -148,7 +148,8 @@ with open('matrix.csv') as csvfile:
         if row[0] == "next":
             character1_transmat = np.array(temp_array)
             temp_array.clear()
-        temp_array.append(row)
+            continue
+        temp_array.append([float(n) for n in row])
 
     character2_transmat = np.array(temp_array)
 
