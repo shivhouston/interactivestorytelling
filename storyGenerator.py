@@ -3,6 +3,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 import random
 from datetime import datetime
+import csv
 
 random.seed(datetime.now())
 
@@ -128,6 +129,30 @@ def write_story( typechar1, typechar2, doesloop ):
     file.write( soup.prettify() )
 
 
+# CSV File Format
+# <Row 1>
+# <Row 2>
+#
+# Example
+# 0.1, 0.3, 0.3, 0.3
+# 0.1, 0.3, 0.3, 0.3
+# 0.1, 0.3, 0.3, 0.3
+# 0.1, 0.3, 0.3, 0.3
+
+print("Reading in transition matrices from file...")
+with open('matrix.csv') as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=',')
+    temp_array = []
+    for row in csv_reader:
+        print(row)
+        if row[0] == "next":
+            character1_transmat = np.array(temp_array)
+            temp_array.clear()
+        temp_array.append(row)
+
+    character2_transmat = np.array(temp_array)
+
+
 print("Available Characters: duck, frog, and octopus")
 character1 = input("Enter character 1: ")
 character2 = input("Enter character 2: ")
@@ -191,6 +216,4 @@ write_story( character1, character2, loop )
 XML File will need to include
 characters chosen
 loop boolean
-
-
 """
