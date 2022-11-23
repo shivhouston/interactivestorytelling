@@ -2,6 +2,8 @@
 
 The objectives of the project are as follows: view previous efforts to create hyperlinks via various mathematical methods, evaluate these methods into forming a specific approach such as Markov chains, create a procedure for classifying the websites and links as different components in the Markov model, and implement a coherent framework with nodes and edges to satisfy the goal of a hyperlinked Markov chain design.
 
+The structure of the project is outlined visually in this PowerPoint presentation: [Link](https://docs.google.com/presentation/d/1MEpp6TO1B-Cq3w6RQi9G6wiILmnvPVAI6G-YXNOasAs/edit?usp=sharing)  
+
 ### matrixGenerator.py
 
 Generates a matrix using randomly generated values and/or user inputted values that can be imported into the storyGenerator.py in order to create various emotions and scenes.
@@ -35,7 +37,7 @@ This page gives us more of an idea behind the mathematics of Markov models. The 
 - d is a chosen constant relating to how likely the surfer is to return to the restart state 0. (d is the probability of going to an actual page and 1-d is the probability of restarting)
 - There is also a probability for moving from state to the non-restart state which is calculated by d / N, where N is the total number of webpages
 
-[Link Prediction and Path Analysis Using Markov Chains](http://www9.thewebconf.org/w9cdrom/68/68.html)  
+[Link Prediction and Path Analysis Using Markov Chains](http://www9.thewebconf.org/w9cdrom/68/68.html)   
 In this paper, the notion of probabilistic link prediction and path analysis using Markov chains is proposed and evaluated. This paper presents using Hidden Markov Models as a sort of page rank that will allow a user that accesses one webpage to move onto another webpage that is relevant and connected are predicted by the model.
 
 [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/)  
@@ -43,3 +45,12 @@ hmmlearn is a library for Python. The library is a set of algorithms for unsuper
 
 [Hidden Markov Model HMM Implementation using Python](https://www.youtube.com/watch?v=mnGN9BUs0HI)  
 This is a video walk-through implementing and using one of the python packages for Hidden Markov Models. This is a good starting point to understand how the code works and how it could be implemented in our situation.
+
+[Hidden Markov Model - Implemented from scratch](https://zerowithdot.com/hidden-markov-model/)  
+This article goes over how to implement a hidden markov model from scratch. The language is python and the libraries imported are numpy and pandas. The article details out how to make the probability matrix, how to build a hidden markov chain, and how to train the model.
+
+[Twitter Storytelling Generator](https://ieeexplore.ieee.org/abstract/document/8982411?casa_token=f71O3BduyAYAAAAA:PaFLVJKTe13p8v-A6CEnXLiHQtJuJrmVvzudQS2BdYXEgP8A3H2GIrpwMpxe8NuqLI6iOTDMpfY)  
+Twitter Storytelling Generator Using Latent Dirichlet Allocation and Hidden Markov Model POS-TAG (Part-of-Speech Tagging). This research proposes a method of Twitter storytelling generator that combines Latent Dirichlet Allocation (LDA) and Hidden Markov Model POS-TAG (Part-of-Speech Tagging), so it can generate twitter storytelling based on the certain topic.
+
+[Never-ending Storytelling with Discrete-Time Markov Processes](https://archive.bridgesmathart.org/2012/bridges2012-85.pdf)  
+This paper presents a theoretical framework to create never-ending stories. Their theoretical framework is developed using discrete-time stochastic processes with a Markov property. They have developed a visual storytelling system that helps users to interactively create narratives.
