@@ -6,96 +6,126 @@
   frog
  </type_of_character_two>
  <does_story_loop>
-  False
+  True
  </does_story_loop>
 </story>
 <scene>
  <characterone>
-  <emotion>
-   Fear
-  </emotion>
-  <dialogue>
-   null
-  </dialogue>
- </characterone>
- <charactertwo>
-  <emotion>
-   Happiness
-  </emotion>
-  <dialogue>
-   null
-  </dialogue>
- </charactertwo>
-</scene>
-<scene>
- <characterone>
-  <emotion>
-   Happiness
-  </emotion>
-  <dialogue>
-   null
-  </dialogue>
- </characterone>
- <charactertwo>
   <emotion>
    Sadness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Happiness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+  <proportion>
+   50
+  </proportion>
  </charactertwo>
 </scene>
 <scene>
  <characterone>
   <emotion>
-   Fear
+   Sadness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
  </characterone>
  <charactertwo>
   <emotion>
-   Anger
+   Happiness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
  </charactertwo>
 </scene>
 <scene>
  <characterone>
   <emotion>
-   Fear
+   Sadness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
  </characterone>
  <charactertwo>
   <emotion>
-   Fear
+   Happiness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
  </charactertwo>
 </scene>
 <scene>
  <characterone>
   <emotion>
-   Anger
+   Sadness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
  </characterone>
  <charactertwo>
   <emotion>
-   Anger
+   Happiness
   </emotion>
   <dialogue>
    null
   </dialogue>
+  <proportion>
+   50
+  </proportion>
+ </charactertwo>
+</scene>
+<scene>
+ <characterone>
+  <emotion>
+   Sadness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+  <proportion>
+   50
+  </proportion>
+ </characterone>
+ <charactertwo>
+  <emotion>
+   Happiness
+  </emotion>
+  <dialogue>
+   null
+  </dialogue>
+  <proportion>
+   50
+  </proportion>
  </charactertwo>
 </scene>

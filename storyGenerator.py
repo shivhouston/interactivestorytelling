@@ -117,10 +117,17 @@ def write_story( typechar1, typechar2, doesloop ):
         curScene_char2_dialogue = soup.new_tag("dialogue")
         curScene_char2_dialogue.string = "null"
 
+        curScene_char1_proportion = soup.new_tag("proportion")
+        curScene_char1_proportion.string = "50"
+        curScene_char2_proportion = soup.new_tag("proportion")
+        curScene_char2_proportion.string = "50"
+
         curScene_char1.append( curScene_char1_emotion )
         curScene_char2.append( curScene_char2_emotion )
         curScene_char1.append( curScene_char1_dialogue )
         curScene_char2.append( curScene_char2_dialogue )
+        curScene_char1.append(curScene_char1_proportion)
+        curScene_char2.append(curScene_char2_proportion)
         curScene.append( curScene_char1 )
         curScene.append( curScene_char2 )
         soup.append(curScene)
