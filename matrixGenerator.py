@@ -5,9 +5,14 @@ from datetime import datetime
 random.seed(datetime.now())
 
 character_transmat = [[0, 0, 0, 0],
-                       [0, 0, 0, 0],
-                       [0, 0, 0, 0],
-                       [0, 0, 0, 0]]
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0]]
+
+# Each column in the transition matrix will signify the states or emotions in the order Happiness, Sadness, Anger, Fear
+# In the matrix, [0][0] will signify the probability that the character's emotional state will go from happy to happy
+# In the matrix, [0][1] will signify the probability that the character's emotional state will go from happy to sad
+# The probabilities for each state must add up to 1
 
 file = open("matrix.csv", "w")
 
