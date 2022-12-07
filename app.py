@@ -10,6 +10,7 @@ character2_type = ""
 willstoryloop = False
 
 
+# Home page. Setups up global variables to be used later.
 @app.route("/")
 def index():
     global character1_emotion, character2_emotion, willstoryloop, character1_type, character2_type
@@ -20,6 +21,7 @@ def index():
     willstoryloop = False
     return render_template("index.html")
 
+# Takes in the uploaded file and processes the data within it. Returns the story viewing or editing page based on whichever button was clicked.
 @app.route("/upload-image", methods=['GET', 'POST'])
 def fileupload():
     global character1_emotion, character2_emotion, willstoryloop, character1_type, character2_type
@@ -60,6 +62,7 @@ def fileupload():
                                        character1_emotion=character1_emotion, character2_dialogue=character2_dialogue,
                                        character2_emotion=character2_emotion)
 
+# Generates a new xml file after the user is done editing the story.
 @app.route('/generate', methods=['POST'])
 def generateXML():
     global character1_emotion, character2_emotion, willstoryloop, character1_type, character2_type
